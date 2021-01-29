@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Klasifikasi Tafsir</title>
+		
+		<meta charset="utf-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		{% load static %}
+  		<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body style="margin-top: 30px;margin-left: 30px;">
+		<!--Text-->
+		<div class="wrapper">
+			<div class="jumbotron text-center">
+				<h2>Klasifikasi Teks Hasil Terjemah Tafsir Menggunakan Algoritma Support Vector Machine (SVM)</h2>
+			</div>
+		</div>
+		<!--End Text-->
+
+		<!--Content1-->
+		<div class="wrapper">
+			<div id="aktivitas" class="container-fluid text-center bg-grey">
+				<h3>Masukkan Data</h3>
+				<form action="{% url "klasifikasi:index" %}" method="post" enctype="multipart/form-data">
+					<!-- <div class="rowdata"> -->
+						{% csrf_token %}
+
+		    		 <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="padding-left: 450px; margin-top: 10px; margin-bottom: 10px;"
+                   required="required">
+            <p>
+            <input type="submit"
+                   value="Upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+	    		</form>
+	    		<p></p>
+	    		        <hr>
+	    		        <div class="container">          
+							  <table class="table table-bordered">
+							  	<tr>
+							  		<td>Tafsir</td>
+							  		<td>Label</td>
+							  		<td>Klasifikasi</td>
+							  	</tr>
+	    		        <tbody>
+	    		        	{% for row in excel_data %}
+	    		        	<tr>
+	    		        		{% for cell in row %}
+	    		        		<td>{{ cell }}</td>
+	    		        		{% endfor %}
+	    		        	</tr>
+	    		        	{% endfor %}
+	    		        </tbody>
+	    		    </table>
+	    		    <tbody>
+
+							<!-- <div class="col-md-4">
+							  {% for a in data_uji %}
+							  <table>
+							  	<tr>
+							  		<td>Data Uji</td>
+							  	</tr>
+							  	{% for b in a %}
+							  	<tr>
+							  		<td>{{ b }}</td>
+							  	</tr>
+							  	{% endfor %}
+							  	<br>
+							</tbody>
+							  </table>
+
+							  {% endfor %}
+							</div>
+
+						<div class="col-md-4">
+							  {% for a in data_prediksi %}
+							  <table>
+							  	<tr>
+							  		<td>Data Prediksi</td>
+							  	</tr>
+							  	{% for b in a %}
+							  	<tr>
+							  		<td>{{ b }}</td>
+							  	</tr>
+							  	{% endfor %}
+							  	<br>
+							  </table>
+							  {% endfor %}
+							</div> -->
+
+<!-- 						<div class="col-md-6">
+							  {% for a in label_manual %}
+							  <table>
+							  	<tr>
+							  		<td>Label</td>
+							  	</tr>
+							  	{% for b in a %}
+							  	<tr>
+							  		<td>{{ b }}</td>
+							  	</tr>
+							  	{% endfor %}
+							  	<br>
+							  </table>
+							  {% endfor %}
+							</div>
+
+						<div class="col-md-6">
+							  {% for a in excel_data %}
+							  <table>
+							  	<tr>
+							  		<td>Tafsir</td>
+							  	</tr>
+							  	{% for b in a %}
+							  	<tr>
+							  		<td>{{ b }}</td>
+							  	</tr>
+							  	{% endfor %}
+							  	<br>
+							  </table>
+							  {% endfor %}
+							</div> -->
+
+
+            	<div>
+            		<table class="table table-bordered">
+            		<tr>
+            			<td>Akurasi 10 Fold Cross Validation : {{ akurasi }}</td>
+            		</tr>
+            		<br><br>
+            		<td><h5>Rata-rata Akurasi : {{ rata2 }}</h5></td>
+            		<br><br>
+            		
+            		<img src="data:image/png;base64,{{ data }}" alt="" height="600", width="600">
+            		<br><br>
+
+
+            	<!-- 	<tr>
+            			<td>Metrics : {{ metrics }}</td>
+            		</tr> -->
+            	</table>
+            	</div>
+
+			</div>
+		</div>
+		<!--End Content1-->
+
+		<!--Footer-->
+		<div class="wrapper">
+			<footer>
+	        	<div class="row" style="background: #008080;">
+		            <div class="col-md-4 col-sm-6 footer-navigation">
+		                <p>Copyright &copy; Noviamalia 2020 </p>
+		            </div>
+		            <div class="#">
+		                <div><span class="#"></span>
+		                    <p><span class="new-line-span"></span></p>
+		                </div>
+		                <div><i class="#"></i>
+		                    <p class="#"></p>
+		                </div>
+		                <div><i class=""></i>
+		                    <p> <a href="#" target="_blank"></a></p>
+		                </div>
+		            </div>
+		            <div class="clearfix visible-sm-block"></div>
+			        </div>
+	        	</div>
+    		</footer>
+		</div>
+		<!--End Footer-->
+	</body>
+</html>

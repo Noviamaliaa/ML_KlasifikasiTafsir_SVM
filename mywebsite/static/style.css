@@ -1,0 +1,227 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+.wrapper{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+/*text*/
+.jumbotron {
+    background-color: #008080;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+}
+/*End text*/
+
+/*Content1*/
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.bg-grey {
+    background-color: #E0FFFF;
+}
+label{
+    margin-top: 10px;
+}
+button{
+    margin-top: 10px;
+    margin-right: 170px;
+}
+/*End Content1*/
+
+/*Content2*/
+.row1{
+    margin-top: 10px;
+}
+.row2{
+    margin-top: 10px;
+}
+.row3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.media-left img{
+    width:150px;
+}
+.media{ 
+    border-radius: 25px !important;
+    transition: box-shadow 0.5s;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    font: 400 15px Lato, sans-serif;
+    background-color: #fff;
+}
+.media-body h2{
+    font-family: "Georgia";
+    font-size: 21.5px;
+    text-transform: capitalize;
+}
+.table-bordered{
+ width: 93%;
+}
+/*End Content2*/
+
+/*Footer*/
+footer{
+    background-color: #005580;
+    color: #f6f6f6;
+}
+.footer-navigation h3{
+    margin-top: 30px;
+}
+.footer-navigation h3 a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-family: "Georgia";
+    color: #f6f6f6;
+}
+.footer-navigation h4{
+    margin-top: 20px;
+}
+.footer-navigation h4 a{
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 30px;
+    font-family: "Georgia";
+    color: #f6f6f6;
+}
+.footer-navigation p{
+    font-size: 18px;
+    margin-top: 70px;
+    margin-left: 30px;
+    font-family: "Georgia";
+    color: #f6f6f6;
+    margin-bottom: 30px;
+}
+.footer-contacts{
+    margin-top: 60px;
+}
+.footer-contacts p{
+    text-align: center;
+    margin-top: -55px;
+}
+.footer-contacts a{
+    color: #f6f6f6;
+}
+.footer-about{
+    margin-top: 80px;
+}
+.footer-about h4{
+    font-size: 20px;
+}
+.footer-about p{
+    margin-top: 20px;
+    margin-right: 30px;
+}
+/*End Footer*/
